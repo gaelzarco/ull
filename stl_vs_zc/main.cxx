@@ -1,5 +1,7 @@
-#include <unordered_set>
-#include <vector>
+// #include <unordered_set>
+// #include <array>
+import <unordered_set>;
+import <array>;
 
 // Standard approach
 // Heavily utilizes pointer indirection (math efficient; not hardware eff)
@@ -16,12 +18,8 @@ bool is_duplicate_trade(int trade_id, std::unordered_set<int>& history) {
 // Flat structures are better
 // Range of trade IDs known? -> bitset or direct lookup table.
 // Need history buff? -> ring (circular) buff on stack or pre-alloc mem
-
-#include <array>
-#include <bit>
-
 // Strict compile time
-constexpr size_t MAX_TRADES = 100'000;
+constexpr const size_t MAX_TRADES = 100'000;
 
 // Zero mem alloc during run-time
 // Zero pointer chasing
@@ -48,3 +46,5 @@ public:
         return false;
     }
 };
+
+int main(void) { return 0; }
